@@ -1,0 +1,207 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1e1e2f;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.tts-container, 
+.recording-container, 
+.history-container {
+    width: 80%; /* Increased width */
+    max-width: 1200px; /* Prevent it from getting too wide */
+    background-color: #29293d;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.tts-container textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: none;
+    background-color: #1e1e2f;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.tts-container textarea::placeholder {
+    color: #cccccc;
+}
+
+.tts-container input[type="text"],
+.tts-container select {
+    width: 100%;
+    padding: 8px;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: none;
+    background-color: #1e1e2f;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+fieldset {
+    border: 1px solid #444;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+fieldset legend {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+fieldset label {
+    display: block;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+button.play-btn {
+    background-color: #5c6bc0;
+    color: #ffffff;
+}
+
+button.record-btn {
+    background-color: #e57373;
+    color: #ffffff;
+}
+
+button.record-btn:disabled {
+    background-color: #8d8d8d;
+    cursor: not-allowed;
+}
+
+.recording-description {
+    font-size: 0.9rem;
+    color: #cccccc;
+    margin-top: 10px;
+}
+
+.history-container {
+    text-align: center;
+}
+
+.history-box {
+    width: 100%;
+    max-height: 400px;
+    overflow-y: auto;
+    background-color: #1e1e2f;
+    border: 1px solid #444;
+    border-radius: 4px;
+    padding: 10px;
+    box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+#recordingsList {
+    list-style: none;
+    padding: 0;
+}
+
+#recordingsList li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #29293d;
+    border-radius: 4px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#recordingsList li span {
+    flex: 1;
+    color: #ffffff;
+}
+
+#recordingsList li audio {
+    flex: 2;
+    margin: 0 10px;
+}
+
+#recordingsList li button {
+    flex: 0;
+    background-color: #e57373;
+    color: #ffffff;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    border-radius: 4px;
+}
+
+#recordingsList li button:hover {
+    background-color: #d32f2f;
+}
+audio {
+    width: 100%;
+    height: 32px;
+    background-color: #29293d; /* Dark background for the audio bar */
+    border: 1px solid #29293d; /* Border for better separation */
+    border-radius: 4px; /* Rounded corners */
+    color: #ffffff; /* Text and controls color */
+    margin: 10px 0; /* Spacing between audio elements */
+    outline: none; /* Remove default focus outline */
+}
+
+/* For browsers that support ::-webkit-media */
+audio::-webkit-media-controls-panel {
+    background-color: #29293d; /* Dark theme background */
+    border-radius: 4px;
+    color: #ffffff; /* Text and controls color */
+}
+
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-pause-button,
+audio::-webkit-media-controls-timeline,
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+    color: #ffffff; /* Button and text color */
+    background-color: #29293d; /* Button background */
+    border-radius: 4px;
+}
+
+audio::-webkit-media-controls-timeline-container {
+    background-color: #29293d; /* Timeline background */
+    border-radius: 4px;
+}
+
+audio::-webkit-media-controls-volume-slider {
+    background-color: #29293d; /* Volume slider background */
+    border-radius: 4px;
+}
+
+audio::-webkit-media-controls-mute-button {
+    color: #ffffff; /* Mute button text color */
+    background-color: #29293d; /* Mute button background */
+    border-radius: 4px;
+}
+
+/* For browsers that support ::-moz-media */
+audio::-moz-media-controls {
+    background-color: #29293d;
+    border-radius: 4px;
+    color: #29293d;
+}

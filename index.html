@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI TTS</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>AI TTS With Audio Capture</h1>
+  <p class="recording-description">
+    This will only work with Microsoft Edge & you need to be signed in to a Microsoft Account to use the online voices.<br>
+    To utilize the recording functionality you also need to have the backend cmd open and running. If you dont have it you can download it here: https://mygithub/project link/releases what ever
+  </p>
+  <div class="tts-container">
+    <textarea id="textToSpeak" placeholder="Enter prompt..." rows="8"></textarea>
+
+    <label for="voiceSearch">Search Voice:</label>
+    <input type="text" id="voiceSearch" placeholder="Search for a voice..." />
+
+    <fieldset id="voiceFilters">
+      <legend>Filter Voices</legend>
+      <label><input type="checkbox" value="online"> Online</label>
+      <label><input type="checkbox" value="language"> Language: English</label>
+      <label><input type="checkbox" value="multilingual"> Multilingual</label>
+    </fieldset>
+
+    <label for="voiceSelect">Select Voice:</label>
+    <select id="voiceSelect" size="5"></select>
+    <button id="playTTS" class="play-btn">Generate</button>
+  </div>
+
+  <div class="recording-container">
+    <button id="startRecording" class="record-btn">Start Recording</button>
+    <button id="stopRecording" class="record-btn" disabled>Stop Recording</button>
+    <p class="recording-description">
+      Use the recording buttons to start and stop capturing audio (Generic system audio capture). The recording will include all system audio during playback.
+    </p>
+  </div>
+
+  <div class="history-container">
+    <h2>Recording History</h2>
+    <div class="history-box">
+      <ul id="recordingsList"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
